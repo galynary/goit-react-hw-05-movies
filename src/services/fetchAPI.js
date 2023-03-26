@@ -24,7 +24,7 @@ export async function CompleteInformationFilm(id) {
   return Api(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
 }
 
-export async function CastFilm(id) {
+export async function fetchMovieCredits(id) {
   return Api(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`);
 }
 

@@ -8,28 +8,28 @@ import { toast } from 'react-toastify';
 const Cast = () => {
   const { Id } = useParams();
   const [movieCast, setMovieCast] = useState();
-  const [error, setError] = useState('');
   const [onLoad, setOnLoad] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     setOnLoad(true);
-    const fetchMovieCast = async () => {
+    const getMovieCast = async () => {
       try {
         const data = await fetchMovieCredits(Id);
         setMovieCast(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was not correct. Please try again!');
       } finally {
         setOnLoad(false);
       }
     };
-    fetchMovieCast();
+    getMovieCast();
   }, [Id]);
 
   return (
     <>
-      {onLoad && <Loader />}
       {movieCast && <CastList cast={movieCast} />}
+      {onLoad && <Loader />}
       {error && <div>{toast(error)}</div>}
     </>
   );

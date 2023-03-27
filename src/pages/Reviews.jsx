@@ -6,7 +6,7 @@ import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
 
 const Reviews = () => {
-  const { movieId } = useParams();
+  const { Id } = useParams();
   const [movieReviews, setMovieReviews] = useState();
   const [onLoad, setOnLoad] = useState(false);
   const [error, setError] = useState('');
@@ -15,16 +15,16 @@ const Reviews = () => {
     setOnLoad(true);
     const getReviews = async () => {
       try {
-        const data = await fetchMovieReviews(movieId);
+        const data = await fetchMovieReviews(Id);
         setMovieReviews(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was not correct. Please try again!');
       } finally {
         setOnLoad(false);
       }
     };
     getReviews();
-  }, [movieId]);
+  }, [Id]);
 
   return (
     <>

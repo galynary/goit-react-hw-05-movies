@@ -11,8 +11,8 @@ const Movies = () => {
   const [onLoad, setOnLoad] = useState(false);
   const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchValue = searchParams.get('query') ?? '';
 
+  const searchValue = searchParams.get('query') ?? '';
   useEffect(() => {
     if (!searchValue) return;
     setOnLoad(true);
@@ -21,7 +21,7 @@ const Movies = () => {
         const data = await fetchSearchMovies(searchValue);
         setMovies(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was not correct. Please try again!');
       } finally {
         setOnLoad(false);
       }

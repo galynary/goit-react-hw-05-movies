@@ -34,7 +34,7 @@ const FilmCard = ({ film }) => {
             </Link>
           </ul>
 
-          <Suspense fallback={<div>Loading page...</div>}>
+          <Suspense fallback={<div>Loading page</div>}>
             <Outlet />
           </Suspense>
         </Content>

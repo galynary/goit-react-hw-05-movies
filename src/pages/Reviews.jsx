@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchMovieReviews } from 'services';
+import { fetchMovieReviews } from 'fetchAPI/services';
 import { ReviewsList } from 'components/ReviewList/ReviewList';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';

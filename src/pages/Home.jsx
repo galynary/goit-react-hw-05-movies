@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchTrendingMovies } from 'api/fetchAPI';
+import { fetchTrendingMovies } from 'fetchAPI/services';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MovieList/MovieList';
 import { toast } from 'react-toastify';
@@ -11,17 +11,17 @@ const TrendingMovies = () => {
 
   useEffect(() => {
     setOnLoad(true);
-    const renderTrendingMovies = async () => {
+    const getTrendingMovies = async () => {
       try {
         const data = await fetchTrendingMovies();
         setTrendingFilms(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was not correct. Please try again!');
       } finally {
         setOnLoad(false);
       }
     };
-    renderTrendingMovies();
+    getTrendingMovies();
   }, []);
 
   return (

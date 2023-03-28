@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { POSTER_URL } from 'services';
+import { POSTER_URL } from 'posterUrl/services';
 import { Container, Content, FilmTitle, Img } from './FilmCard.styled';
 const FilmCard = ({ film }) => {
   const location = useLocation();
@@ -26,10 +26,10 @@ const FilmCard = ({ film }) => {
         <Content>
           <h2>Additional information</h2>
           <ul>
-            <Link to="cast" state={{ from: location }}>
+            <Link to="cast" state={{ from: location.state?.from }}>
               Cast
             </Link>
-            <Link to="reviews" state={{ from: location }}>
+            <Link to="reviews" state={{ from: location.state?.from }}>
               Reviews
             </Link>
           </ul>

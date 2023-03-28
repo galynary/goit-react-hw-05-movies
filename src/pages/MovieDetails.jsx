@@ -1,13 +1,13 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useParams, useLocation, Outlet } from 'react-router-dom';
-import { fetchMovieDetails } from 'api/fetchAPI';
+import { fetchMovieDetails } from 'fetchAPI/services';
 import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { BackButton } from 'components/MovieInfo/MovieInfo.styled';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
 
 const MovieDetails = () => {
-  const { movieId } = useParams();
+  const { Id } = useParams();
   const [movie, setMovie] = useState(null);
   const [onLoad, setOnLoad] = useState(false);
   const [error, setError] = useState('');
@@ -19,16 +19,16 @@ const MovieDetails = () => {
     setOnLoad(true);
     const getMovieDetails = async () => {
       try {
-        const data = await fetchMovieDetails(movieId);
+        const data = await fetchMovieDetails(Id);
         setMovie(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was not correct. Please try again!');
       } finally {
         setOnLoad(false);
       }
     };
     getMovieDetails();
-  }, [movieId]);
+  }, [Id]);
 
   return (
     <main>

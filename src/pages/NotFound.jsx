@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Error = () => {
+const NotFound = () => {
   return (
     <div style={{ padding: '40px' }}>
       <h2 style={{ padding: '40px', fontSize: '24px' }}>
@@ -13,4 +13,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default NotFound;

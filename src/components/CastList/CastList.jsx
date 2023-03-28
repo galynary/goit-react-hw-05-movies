@@ -1,6 +1,6 @@
 //import defaultImage from '../../images/no-poster.jpg';
 import PropTypes from 'prop-types';
-import { POSTER_URL } from 'services';
+import { POSTER_URL } from 'posterUrl/services';
 import { Character, Name, Image, List, Item } from './CastList.styled';
 export const CastList = ({ cast }) => {
   return (

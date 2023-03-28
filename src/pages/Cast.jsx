@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchMovieCredits } from 'api/fetchAPI';
+import { fetchMovieCast } from 'fetchAPI/services';
 import { CastList } from 'components/CastList/CastList';
 import { Loader } from 'components/Loader/Loader';
 import { toast } from 'react-toastify';
@@ -15,7 +15,7 @@ const Cast = () => {
     setOnLoad(true);
     const getMovieCast = async () => {
       try {
-        const data = await fetchMovieCredits(Id);
+        const data = await fetchMovieCast(Id);
         setMovieCast(data);
       } catch (error) {
         setError('The request was not correct. Please try again!');

@@ -24,7 +24,7 @@ export async function fetchMovieDetails(id) {
   return Api(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
 }
 
-export async function fetchMovieCredits(id) {
+export async function fetchMovieCast(id) {
   return Api(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`);
 }
 

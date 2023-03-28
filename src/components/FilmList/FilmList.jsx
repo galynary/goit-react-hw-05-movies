@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
-import { POSTER_URL } from 'services';
+import { POSTER_URL } from 'posterUrl/services';
 import { Container, List, Item, Img, FilmTitle } from './FilmList.styled';
 const FilmList = ({ films }) => {
   const location = useLocation();

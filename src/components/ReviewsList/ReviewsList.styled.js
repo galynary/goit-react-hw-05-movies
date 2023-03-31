@@ -10,9 +10,9 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  padding: 20px;
-  background-color: #272727;
-  > p {
+    padding: 20px;
+    background-color: #272727; 
+    > p { 
     text-align: center;
     line-height: 1.5em;
     font-size: 12px;
@@ -24,4 +24,5 @@ export const Name = styled.p`
   padding: 0 10px;
   text-transform: capitalize;
   font-size: large;
+
 `;

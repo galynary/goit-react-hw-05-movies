@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import { Item, List, Name } from './ReviewsList.styled';
+import PropTypes from 'prop-types';
 
 export const ReviewsList = ({ reviews }) => {
   return (

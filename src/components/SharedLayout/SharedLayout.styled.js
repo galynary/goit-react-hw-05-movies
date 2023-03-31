@@ -7,6 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,11 +21,12 @@ export const Link = styled(NavLink)`
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: white;
+  color: white; 
   text-decoration: none;
   text-transform: capitalize;
   border-bottom: 4px solid transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &.active {
     border-color: #ec9706;
     border-radius: 2px;

@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { MoviesList } from 'components/MovieList/MovieList';
 import { SearchForm } from 'components/Form/Form';
-import { fetchSearchMovies } from 'fetchAPI/services';
-import { Loader } from 'components/Loader/Loader';
+import { fetchSearchMovies } from 'api/fetchAPI';
+import { Loader } from "components/Loader/Loader";
 import { toast } from 'react-toastify';
 
 const Movies = () => {
@@ -11,8 +11,8 @@ const Movies = () => {
   const [onLoad, setOnLoad] = useState(false);
   const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
-
   const searchValue = searchParams.get('query') ?? '';
+
   useEffect(() => {
     if (!searchValue) return;
     setOnLoad(true);
@@ -21,12 +21,13 @@ const Movies = () => {
         const data = await fetchSearchMovies(searchValue);
         setMovies(data);
       } catch (error) {
-        setError('The request was not correct. Please try again!');
-      } finally {
+        setError('Something wrong');
+      } finally { 
         setOnLoad(false);
       }
     };
     searchMovies();
+
   }, [searchValue]);
 
   const onInputSearch = value => {

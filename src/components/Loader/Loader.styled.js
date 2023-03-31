@@ -11,3 +11,4 @@ export const Wrapper = styled.div`
   justify-content: center;
   background-color: rgba(24, 22, 21, 0.9);
 `;
+

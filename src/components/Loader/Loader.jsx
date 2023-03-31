@@ -5,12 +5,12 @@ export const Loader = () => {
   return (
     <Wrapper>
       <ThreeDots
-        height="80"
-        width="80"
+        height="150"
+        width="150"
         radius="9"
-        color="#3f51b5"
+        color="orange"
         ariaLabel="three-dots-loading"
-        wrapperStyle={{ justifyContent: 'center' }}
+        wrapperStyle={{}}
         wrapperClassName=""
         visible={true}
       />

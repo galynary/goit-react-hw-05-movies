@@ -2,11 +2,10 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(71, 71, 71);
+  background-color: #fff;
   color: white;
 }
 
@@ -15,7 +14,7 @@ code {
     monospace;
 }
 
-img { 
+img {
   max-width: 100%;
   height: auto;
   object-fit: contain;

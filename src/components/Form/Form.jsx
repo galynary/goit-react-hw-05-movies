@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import loupe from '../../images/loupe.svg';
 import PropTypes from 'prop-types';
-import { Container, Form, Field, Label, Input, Button } from './Form.styled';
+import { Container, Form, Field, Input, Button } from './Form.styled';
 import { toast } from 'react-toastify';
 
 export const SearchForm = ({ onSubmit }) => {
@@ -34,10 +34,9 @@ export const SearchForm = ({ onSubmit }) => {
             name="query"
             value={query}
             autoComplete="off"
-            placeholder=" "
+            placeholder="Search"
             onChange={handleChange}
           />
-          <Label>Search movies</Label>
         </Field>
       </Form>
     </Container>

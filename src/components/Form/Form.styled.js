@@ -24,30 +24,35 @@ export const Field = styled.div`
 export const Input = styled.input`
   width: 100%;
   background-color: transparent;
-  border: 1px solid #fefefe;
+  border: 1px solid #ff72b6;
   border-radius: 10px;
-  color: #fff;
+  color: #272020;
   padding: 17px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
-    border-color: #ec9706;
+    border-color: #ab135c;
   }
 `;
 
 export const Button = styled.button`
+  display: inline-block;
   position: absolute;
+  height: 20px;
+  width: 22px;
   top: 50%;
   right: 16px;
   transform: translateY(-50%);
-  padding: 0;
-  color: #fefefe;
+  right: 0px;
+  border: 0;
   background-color: transparent;
-  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: #ec9706;
+  outline: none;
+  :hover {
+    opacity: 1;
   }
 `;

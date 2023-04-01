@@ -7,12 +7,11 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  background-color: #272727;
+  background-color: #ffeaf4;
   margin-bottom: 20px;
 `;
 
@@ -21,18 +20,15 @@ export const Link = styled(NavLink)`
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: white; 
+  font-width: 600;
+  font-size: 24px;
+  color: #840844;
   text-decoration: none;
   text-transform: capitalize;
   border-bottom: 4px solid transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.active {
-    border-color: #ec9706;
-    border-radius: 2px;
-  }
-  &:hover:not(.active),
-  &:focus-visible:not(.active) {
-    color: #ec9706;
+  &:hover,
+  &:focus {
+    color: #ec4394;
   }
 `;

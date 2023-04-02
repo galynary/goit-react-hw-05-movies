@@ -13,7 +13,7 @@ export const SearchForm = ({ onSubmit }) => {
     e.preventDefault();
 
     if (query.trim() === '') {
-      return toast('Wrong query');
+      return toast('The request was incorrect! Try again.');
     }
     onSubmit(query);
     resetForm();

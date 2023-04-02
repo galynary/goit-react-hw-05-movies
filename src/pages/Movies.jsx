@@ -21,7 +21,7 @@ const Movies = () => {
         const data = await fetchSearchMovies(searchValue);
         setMovies(data);
       } catch (error) {
-        setError('Something wrong');
+        setError('The request was incorrect! Try again.');
       } finally { 
         setOnLoad(false);
       }

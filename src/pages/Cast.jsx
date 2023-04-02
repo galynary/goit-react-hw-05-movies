@@ -10,8 +10,7 @@ const Cast = () => {
   const [movieCast, setMovieCast] = useState();
   const [error, setError] = useState('');
   const [onLoad, setOnLoad] = useState(false);
- 
- 
+
   useEffect(() => {
     setOnLoad(true);
     const fetchMovieCast = async () => {
@@ -19,21 +18,21 @@ const Cast = () => {
         const data = await fetchMovieCredits(movieId);
         setMovieCast(data);
       } catch (error) {
-        setError('Something wrong');
-      } finally { 
+        setError('The request was incorrect! Try again.');
+      } finally {
         setOnLoad(false);
       }
     };
     fetchMovieCast();
   }, [movieId]);
 
-  return <>
-    { onLoad && <Loader />}
-    {movieCast && <CastList cast={movieCast} />}
-    {error && <div>{toast(error)}</div>}
-  </>;
+  return (
+    <>
+      {onLoad && <Loader />}
+      {movieCast && <CastList cast={movieCast} />}
+      {error && <div>{toast(error)}</div>}
+    </>
+  );
 };
 
 export default Cast;
-
-
